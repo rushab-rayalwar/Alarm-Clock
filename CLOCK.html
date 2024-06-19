@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Rushab's Clock</title>
+    <link href="CLOCK.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://kit.fontawesome.com/fc0a8fd09e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <!--audio element-->
+        <audio>
+            <source src="alarm.mp3" type="audio/mpeg">
+        </audio>
+
+        <div id="container" >
+            <div id="main-time-display">
+                <span id="time" class="plate"></span> <span id="meridian-current-time"></span>
+            </div>
+            <div id="add-alarm-button"><span>ADD ALARM</span></div>
+
+            <!--add alarm screen-->
+            <div id="add-alarm-screen" class="plate"> 
+                <div id="add-alarm-box" class="plate">
+                    <div id="add-alarm-box-header">
+                        <span>Add An Alarm</span>
+                        <div id="close-mark">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div id="inputs">
+                        <input class="input" type="text" id="hours-input">
+                        <div id="isto">:</div>
+                        <input class="input" type="text" id="minutes-input">
+                        <input type="text" id="meridian" value="AM">
+                    </div>
+                    <div id="add-button">Add</div>
+                </div>
+            </div>
+
+            <!--alarm hit screen-->
+            <div id="alarm-screen" class="plate">
+                <div id="alarm-hit-box" class="plate">
+                    <div id="alarm-hit-header">
+                        <span>Alarm Hit!</span>
+                    </div>
+                    <div class="horizontal-line"></div>
+                    <div class="alarm-time">10:00 AM</div>
+                    <div id="stop-alarm-button">Stop!</div>
+                </div>
+            </div>
+        </div>
+
+        <!--Alarm List On Main Screen-->
+        <div id="alarms-container" class="plate">
+            <div id="no-alarms">No Alarms!</div>
+        </div>
+    </main>
+    <script src="CLOCK.js"></script>
+</body>
